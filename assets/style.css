@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Bungee";
+  src: url("/assets/bungee_regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --ink: #050505;
+  --paper: #f6f0e2;
+  --muted: #b9b3a6;
+  --red: #e2242b;
+  --yellow: #ffd23f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a {
+  color: var(--yellow);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header .brand img {
+  display: block;
+  border-radius: 8px;
+}
+
+header .lang {
+  font-family: "Bungee", sans-serif;
+  text-decoration: none;
+}
+
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+h1,
+h2 {
+  font-family: "Bungee", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: 3px 3px 0 var(--red);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 2em;
+}
+
+.hero {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.hero img {
+  width: min(300px, 70vw);
+  height: auto;
+}
+
+.tagline {
+  font-family: "Bungee", sans-serif;
+  font-size: 1.2rem;
+}
+
+.game {
+  border-top: 2px solid var(--red);
+  text-align: center;
+}
+
+.store {
+  font-family: "Bungee", sans-serif;
+  color: var(--yellow);
+}
+
+footer {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  border-top: 1px solid #333;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 6px 0;
+}
