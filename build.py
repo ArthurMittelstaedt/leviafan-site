@@ -14,8 +14,8 @@ ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
 
 # Shown on the published pages only (the texts in content/ keep a placeholder).
-POSTAL_ADDRESS = "[POSTAL ADDRESS]"
-SIRET = "[SIRET]"
+POSTAL_ADDRESS = "36 bis Rue Demolombe\n14000 Caen, France"
+SIRET = "131 417 099 00010"
 
 DOMAIN = "leviafan.fr"
 CONTACT = "studio.leviafan@hotmail.com"
