@@ -41,9 +41,30 @@ header .brand img {
   border-radius: 8px;
 }
 
-header .lang {
-  font-family: "Bungee", sans-serif;
+header .langs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px 14px;
+  margin-left: 16px;
+  font-size: 0.85rem;
+}
+
+header .langs a {
   text-decoration: none;
+}
+
+/* Bungee has no lowercase: its "i" is an undotted "I", which a Turkish reader reads "ı".
+   Upper case in Turkish turns "i" into "İ" (the browser follows lang="tr"). */
+:lang(tr) h1,
+:lang(tr) h2,
+:lang(tr) .tagline,
+:lang(tr) .store {
+  text-transform: uppercase;
+}
+
+.note {
+  color: var(--muted);
 }
 
 main {

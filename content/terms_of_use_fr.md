@@ -1,6 +1,6 @@
 # Conditions d'utilisation – Snake 3D
 
-Dernière mise à jour : 23 octobre 2026
+Dernière mise à jour : 3 novembre 2026
 
 ## 1. Objet
 
@@ -17,17 +17,17 @@ Contact : studio.leviafan@hotmail.com
 Nous vous accordons une licence personnelle, non exclusive et non transférable pour utiliser le Jeu à des fins privées et non commerciales. Il est interdit de :
 
 - tricher, modifier le Jeu ou ses données, ou utiliser des logiciels tiers pour obtenir un avantage ;
-- exploiter volontairement un bug pour obtenir des gems, des contenus ou des scores ;
+- exploiter volontairement un bug pour obtenir des Fangs, des contenus ou des scores ;
 - revendre, louer ou distribuer le Jeu ou ses contenus.
 
 Le Jeu, ses graphismes, sons et contenus restent notre propriété ou celle de nos concédants.
 
-## 4. Gems et contenus virtuels
+## 4. Fangs et contenus virtuels
 
-- Les **gems** et les contenus du Jeu (personnages, niveaux, chapeaux, couleurs, retrait des publicités…) sont une **licence d'utilisation dans le Jeu**. Ils n'ont aucune valeur monétaire, ne peuvent être ni échangés contre de l'argent, ni transférés à une autre personne, ni revendus.
+- Les **Fangs** (la monnaie du Jeu) et les contenus du Jeu (personnages, niveaux, chapeaux, couleurs, retrait des publicités…) sont une **licence d'utilisation dans le Jeu**. Ils n'ont aucune valeur monétaire, ne peuvent être ni échangés contre de l'argent, ni transférés à une autre personne, ni revendus.
 - Les **achats intégrés** sont traités par Google Play, selon ses conditions et sa politique de remboursement. Nous ne recevons jamais vos coordonnées de paiement.
-- Les gems et contenus achetés sont livrés immédiatement. Lors de l'achat, vous acceptez cette exécution immédiate et **renoncez à votre droit de rétractation**, comme Google Play vous le demande pour les contenus numériques.
-- Les prix en gems, les quantités, les récompenses et l'équilibrage du Jeu peuvent évoluer avec les mises à jour.
+- Les Fangs et contenus achetés sont livrés immédiatement. Lors de l'achat, vous acceptez cette exécution immédiate et, lorsque la loi de votre pays le permet, **renoncez à votre droit de rétractation**, comme Google Play vous le demande pour les contenus numériques.
+- Les prix en Fangs, les quantités, les récompenses et l'équilibrage du Jeu peuvent évoluer avec les mises à jour.
 
 Ces règles ne limitent pas les droits que la loi vous accorde en tant que consommateur.
 
@@ -43,15 +43,15 @@ Les classements sont fournis par Google Play Jeux. Un score obtenu en trichant o
 
 ## 7. Publicités
 
-Le Jeu affiche des publicités (Google AdMob). Vous pouvez modifier votre consentement aux publicités personnalisées depuis les paramètres du Jeu. Le produit « No ads » retire les publicités du Jeu.
+Le Jeu affiche des publicités (Google AdMob). Vous pouvez modifier votre consentement aux publicités personnalisées depuis les paramètres du Jeu. Le produit « Sans pub » retire les publicités du Jeu.
 
 ## 8. Évolution et arrêt du Jeu
 
 Nous pouvons faire évoluer le Jeu, ses contenus et ses services en ligne, et décider un jour d'arrêter le Jeu ou certains de ses services. Dans ce cas :
 
 - nous vous prévenons **au moins 60 jours à l'avance**, dans le Jeu, sur sa fiche Google Play ou sur notre site ;
-- la **vente de gems et de contenus s'arrête dès l'annonce** ;
-- à l'arrêt, les gems et contenus non utilisés sont perdus, sauf disposition légale contraire.
+- la **vente de Fangs et de contenus s'arrête dès l'annonce** ;
+- à l'arrêt, les Fangs et contenus non utilisés sont perdus, sauf disposition légale contraire.
 
 ## 9. Responsabilité
 

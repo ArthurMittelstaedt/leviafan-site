@@ -1,6 +1,6 @@
 # Terms of Use – Snake 3D
 
-Last updated: October 23, 2026
+Last updated: November 3, 2026
 
 ## 1. Purpose
 
@@ -17,17 +17,17 @@ Contact: studio.leviafan@hotmail.com
 We grant you a personal, non-exclusive and non-transferable license to use the Game for private, non-commercial purposes. You must not:
 
 - cheat, modify the Game or its data, or use third-party software to gain an advantage;
-- knowingly exploit a bug to obtain gems, content or scores;
+- knowingly exploit a bug to obtain Fangs, content or scores;
 - resell, rent or distribute the Game or its content.
 
 The Game, its graphics, sounds and content remain the property of us or our licensors.
 
-## 4. Gems and virtual content
+## 4. Fangs and virtual content
 
-- **Gems** and the Game's content (characters, levels, hats, colors, ad removal…) are a **license to use within the Game**. They have no monetary value and cannot be exchanged for money, transferred to another person or resold.
+- **Fangs** (the Game's currency) and the Game's content (characters, levels, hats, colors, ad removal…) are a **license to use within the Game**. They have no monetary value and cannot be exchanged for money, transferred to another person or resold.
 - **In-app purchases** are processed by Google Play, under its terms and refund policy. We never receive your payment details.
-- Purchased gems and content are delivered immediately. When purchasing, you agree to this immediate delivery and **waive your right of withdrawal**, as Google Play asks you to for digital content.
-- Gem prices, quantities, rewards and the Game's balance may change with updates.
+- Purchased Fangs and content are delivered immediately. When purchasing, you agree to this immediate delivery and, where the law of your country allows it, **waive your right of withdrawal**, as Google Play asks you to for digital content.
+- Prices in Fangs, quantities, rewards and the Game's balance may change with updates.
 
 These rules do not limit the rights the law gives you as a consumer.
 
@@ -50,8 +50,8 @@ The Game shows ads (Google AdMob). You can change your consent to personalized a
 We may change the Game, its content and its online services, and may one day decide to shut down the Game or some of its services. In that case:
 
 - we will notify you **at least 60 days in advance**, in the Game, on its Google Play listing or on our website;
-- the **sale of gems and content stops when the shutdown is announced**;
-- at shutdown, unused gems and content are lost, unless the law provides otherwise.
+- the **sale of Fangs and content stops when the shutdown is announced**;
+- at shutdown, unused Fangs and content are lost, unless the law provides otherwise.
 
 ## 9. Liability
 
