@@ -32,6 +32,12 @@ PAGES = {
     "legal-notice": ("legal_notice", ("en", "fr")),
 }
 
+# The game on Google Play; "hl" picks the language of the store page.
+STORE_URL = "https://play.google.com/store/apps/details?id=com.leviafan.snake3d&hl={hl}"
+# Google's official "Get it on Google Play" badge, in each language (images served by Google).
+BADGE_URL = "https://play.google.com/intl/{locale}/badges/static/images/badges/{name}_badge_web_generic.png"
+SCREENSHOT_COUNT = 5
+
 # Key = suffix of the files in content/ (the game's Legal/ names). In the order of the
 # language links of the header; each language is named in itself.
 LANGUAGES = {
@@ -42,7 +48,9 @@ LANGUAGES = {
         "tagline": "Independent game studio",
         "game_text": "Grow, jump and survive: a snake game in 3D, with a whole cast of characters "
                      "and levels to unlock.",
-        "store": "Coming soon on Google Play",
+        "badge_alt": "Get it on Google Play",
+        "badge": "en_us/en",
+        "store_hl": "en",
         "contact": "Contact:",
         "titles": ("Privacy policy", "Terms of use", "Delete your data", "Legal notice"),
     },
@@ -53,7 +61,9 @@ LANGUAGES = {
         "tagline": "Studio de jeux vidéo indépendant",
         "game_text": "Grandis, saute et survis : un jeu de serpent en 3D, avec toute une galerie de "
                      "personnages et de niveaux à débloquer.",
-        "store": "Bientôt sur Google Play",
+        "badge_alt": "Disponible sur Google Play",
+        "badge": "fr_fr/fr",
+        "store_hl": "fr",
         "contact": "Contact :",
         "titles": ("Politique de confidentialité", "Conditions d'utilisation",
                    "Supprimer vos données", "Mentions légales"),
@@ -65,7 +75,9 @@ LANGUAGES = {
         "tagline": "Estudio de videojuegos independiente",
         "game_text": "Crece, salta y sobrevive: un juego de serpientes en 3D, con todo un elenco de "
                      "personajes y niveles por desbloquear.",
-        "store": "Próximamente en Google Play",
+        "badge_alt": "Disponible en Google Play",
+        "badge": "es_es/es",
+        "store_hl": "es",
         "contact": "Contacto:",
         "titles": ("Política de privacidad", "Condiciones de uso", "Eliminar tus datos",
                    "Aviso legal"),
@@ -77,7 +89,9 @@ LANGUAGES = {
         "tagline": "Estúdio independente de jogos",
         "game_text": "Cresça, pule e sobreviva: um jogo de cobrinha em 3D, com uma turma de "
                      "personagens e fases para desbloquear.",
-        "store": "Em breve no Google Play",
+        "badge_alt": "Disponível no Google Play",
+        "badge": "pt_br/pt-br",
+        "store_hl": "pt-BR",
         "contact": "Contato:",
         "titles": ("Política de Privacidade", "Termos de Uso", "Excluir seus dados",
                    "Aviso legal"),
@@ -89,7 +103,9 @@ LANGUAGES = {
         "tagline": "Unabhängiges Spielestudio",
         "game_text": "Wachse, springe und überlebe: ein Schlangenspiel in 3D, mit vielen "
                      "Charakteren und Levels zum Freischalten.",
-        "store": "Bald bei Google Play",
+        "badge_alt": "Jetzt bei Google Play",
+        "badge": "de_de/de",
+        "store_hl": "de",
         "contact": "Kontakt:",
         "titles": ("Datenschutzerklärung", "Nutzungsbedingungen", "Deine Daten löschen",
                    "Impressum"),
@@ -101,7 +117,9 @@ LANGUAGES = {
         "tagline": "Studio indipendente di videogiochi",
         "game_text": "Cresci, salta e sopravvivi: un gioco del serpente in 3D, con tanti "
                      "personaggi e livelli da sbloccare.",
-        "store": "Presto su Google Play",
+        "badge_alt": "Disponibile su Google Play",
+        "badge": "it_it/it",
+        "store_hl": "it",
         "contact": "Contatti:",
         "titles": ("Informativa sulla privacy", "Condizioni d'uso", "Eliminare i tuoi dati",
                    "Note legali"),
@@ -113,7 +131,9 @@ LANGUAGES = {
         "tagline": "Bağımsız oyun stüdyosu",
         "game_text": "Büyü, zıpla ve hayatta kal: açılacak birçok karakter ve bölümle 3D bir "
                      "yılan oyunu.",
-        "store": "Yakında Google Play'de",
+        "badge_alt": "Google Play'den alın",
+        "badge": "tr_tr/tr",
+        "store_hl": "tr",
         "contact": "İletişim:",
         "titles": ("Gizlilik Politikası", "Kullanım Koşulları", "Verilerini sil",
                    "Yasal bildirim"),
@@ -125,7 +145,9 @@ LANGUAGES = {
         "tagline": "Studio game independen",
         "game_text": "Tumbuh, lompat, dan bertahan: game ular 3D dengan banyak karakter dan level "
                      "untuk dibuka.",
-        "store": "Segera hadir di Google Play",
+        "badge_alt": "Temukan di Google Play",
+        "badge": "id_id/id",
+        "store_hl": "id",
         "contact": "Kontak:",
         "titles": ("Kebijakan Privasi", "Ketentuan Penggunaan", "Hapus data kamu",
                    "Pemberitahuan hukum"),
@@ -137,7 +159,9 @@ LANGUAGES = {
         "tagline": "Niezależne studio gier",
         "game_text": "Rośnij, skacz i przetrwaj: gra w węża w 3D z całą gromadą postaci "
                      "i poziomów do odblokowania.",
-        "store": "Wkrótce w Google Play",
+        "badge_alt": "Pobierz z Google Play",
+        "badge": "pl_pl/pl",
+        "store_hl": "pl",
         "contact": "Kontakt:",
         "titles": ("Polityka prywatności", "Warunki korzystania", "Usuń swoje dane",
                    "Nota prawna"),
@@ -149,7 +173,9 @@ LANGUAGES = {
         "tagline": "Studio game độc lập",
         "game_text": "Lớn lên, nhảy và sống sót: trò chơi rắn 3D với cả dàn nhân vật và màn chơi "
                      "để mở khóa.",
-        "store": "Sắp có trên Google Play",
+        "badge_alt": "Tải nội dung trên Google Play",
+        "badge": "vi_vn/vi",
+        "store_hl": "vi",
         "contact": "Liên hệ:",
         "titles": ("Chính sách quyền riêng tư", "Điều khoản sử dụng", "Xóa dữ liệu của bạn",
                    "Thông báo pháp lý"),
@@ -268,17 +294,36 @@ def _fill(text: str) -> str:
     return text.replace("[SIRET]", SIRET)
 
 
+def _home(lang: str, t: dict) -> str:
+    """The game first (the page is the download link of the social networks), then the studio."""
+    store = html.escape(STORE_URL.format(hl=t["store_hl"]))
+    locale, name = t["badge"].split("/")
+    badge = BADGE_URL.format(locale=locale, name=name)
+    shots_folder = f"/assets/snake3d/{lang.lower().replace('_', '-')}"
+    shots = "\n".join(
+        f'<img src="{shots_folder}/{index}.webp" alt="" width="960" height="540" loading="lazy">'
+        for index in range(1, SCREENSHOT_COUNT + 1)
+    )
+    return f"""<section class="app">
+<a class="app-head" href="{store}">
+<img class="app-icon" src="/assets/snake3d/icon.png" alt="" width="128" height="128">
+<span><span class="app-name">Snake 3D</span><span class="app-dev">Leviafan</span></span>
+</a>
+<p>{t['game_text']}</p>
+<a class="badge" href="{store}"><img src="{badge}" alt="{html.escape(t['badge_alt'])}" width="250" height="97"></a>
+<div class="shots">
+{shots}
+</div>
+</section>
+<section class="hero">
+<img src="/assets/logo.png" alt="Leviafan" width="160" height="160">
+<p class="tagline">{t['tagline']}</p>
+</section>"""
+
+
 def build() -> None:
     for lang, t in LANGUAGES.items():
-        home = f"""<section class="hero">
-<img src="/assets/logo.png" alt="Leviafan" width="300" height="300">
-<p class="tagline">{t['tagline']}</p>
-</section>
-<section class="game">
-<h2>Snake 3D</h2>
-<p>{t['game_text']}</p>
-<p class="store">{t['store']}</p>
-</section>"""
+        home = _home(lang, t)
         _write(f"{_prefix(lang)[1:]}index.html", _layout(lang, "Leviafan", home))
         for slug, (source, _langs) in PAGES.items():
             if lang not in _languages_of(slug):
