@@ -36,7 +36,6 @@ PAGES = {
 STORE_URL = "https://play.google.com/store/apps/details?id=com.leviafan.snake3d&hl={hl}"
 # Google's official "Get it on Google Play" badge, in each language (images served by Google).
 BADGE_URL = "https://play.google.com/intl/{locale}/badges/static/images/badges/{name}_badge_web_generic.png"
-SCREENSHOT_COUNT = 5
 
 # Key = suffix of the files in content/ (the game's Legal/ names). In the order of the
 # language links of the header; each language is named in itself.
@@ -260,14 +259,18 @@ def _layout(lang: str, title: str, body: str, slug: str = "") -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <header>
-<a class="brand" href="{_prefix(lang)}"><img src="/assets/logo.png" alt="Leviafan" width="56" height="56"></a>
-<nav class="langs">{language_links}</nav>
+<a class="brand" href="{_prefix(lang)}"><img src="/assets/logo.png" alt="Leviafan" width="112" height="112"><span class="tagline">{t['tagline']}</span></a>
+<details class="langs">
+<summary><span>{t['name']}</span></summary>
+<nav>{language_links}</nav>
+</details>
 </header>
 <main>
 {body}
@@ -295,29 +298,20 @@ def _fill(text: str) -> str:
 
 
 def _home(lang: str, t: dict) -> str:
-    """The game first (the page is the download link of the social networks), then the studio."""
+    """The game (the page is the download link of the social networks)."""
     store = html.escape(STORE_URL.format(hl=t["store_hl"]))
     locale, name = t["badge"].split("/")
     badge = BADGE_URL.format(locale=locale, name=name)
-    shots_folder = f"/assets/snake3d/{lang.lower().replace('_', '-')}"
-    shots = "\n".join(
-        f'<img src="{shots_folder}/{index}.webp" alt="" width="960" height="540" loading="lazy">'
-        for index in range(1, SCREENSHOT_COUNT + 1)
-    )
     return f"""<section class="app">
+<a class="app-banner" href="{store}"><img src="/assets/snake3d/feature.webp" alt="" width="1024" height="500"></a>
+<div class="app-card">
 <a class="app-head" href="{store}">
 <img class="app-icon" src="/assets/snake3d/icon.png" alt="" width="128" height="128">
 <span><span class="app-name">Snake 3D</span><span class="app-dev">Leviafan</span></span>
 </a>
 <p>{t['game_text']}</p>
 <a class="badge" href="{store}"><img src="{badge}" alt="{html.escape(t['badge_alt'])}" width="250" height="97"></a>
-<div class="shots">
-{shots}
 </div>
-</section>
-<section class="hero">
-<img src="/assets/logo.png" alt="Leviafan" width="160" height="160">
-<p class="tagline">{t['tagline']}</p>
 </section>"""
 
 
