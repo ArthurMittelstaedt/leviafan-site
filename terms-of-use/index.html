@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Use – Snake 3D – Leviafan</title>
+<link rel="alternate" hreflang="en" href="https://leviafan.fr/terms-of-use/">
+<link rel="alternate" hreflang="fr" href="https://leviafan.fr/fr/terms-of-use/">
+<link rel="alternate" hreflang="es" href="https://leviafan.fr/es/terms-of-use/">
+<link rel="alternate" hreflang="pt-BR" href="https://leviafan.fr/pt-br/terms-of-use/">
+<link rel="alternate" hreflang="de" href="https://leviafan.fr/de/terms-of-use/">
+<link rel="alternate" hreflang="it" href="https://leviafan.fr/it/terms-of-use/">
+<link rel="alternate" hreflang="tr" href="https://leviafan.fr/tr/terms-of-use/">
+<link rel="alternate" hreflang="id" href="https://leviafan.fr/id/terms-of-use/">
+<link rel="alternate" hreflang="pl" href="https://leviafan.fr/pl/terms-of-use/">
+<link rel="alternate" hreflang="vi" href="https://leviafan.fr/vi/terms-of-use/">
+<link rel="alternate" hreflang="x-default" href="https://leviafan.fr/terms-of-use/">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -55,5 +66,13 @@
 <p>Contact: <a href="mailto:studio.leviafan@hotmail.com">studio.leviafan@hotmail.com</a></p>
 <p>© Leviafan</p>
 </footer>
+<script>
+// A language picked in the menu is remembered: the home page never redirects again.
+document.querySelectorAll(".langs a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    try { localStorage.setItem("leviafan-language-chosen", "1"); } catch (e) {}
+  });
+});
+</script>
 </body>
 </html>

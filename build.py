@@ -8,6 +8,7 @@ they are.
 """
 
 import html
+import json
 import re
 from pathlib import Path
 
@@ -240,6 +241,35 @@ def _page_url(lang: str, slug: str) -> str:
     return f"{_prefix(shown)}{slug}/"
 
 
+# Set in the browser when the visitor picks a language in the menu.
+LANGUAGE_CHOSEN_KEY = "leviafan-language-chosen"
+
+
+def _language_redirect() -> str:
+    """Script of the English home page (the address shared on social networks): sends a visitor
+    to the home page in their browser's language, if the site has it. Never after a language was
+    picked in the menu, and never for a visitor whose first language is English."""
+    targets = {LANGUAGES[lang]["html_lang"].split("-")[0].lower(): _prefix(lang)
+               for lang in LANGUAGES}
+    return f"""
+<script>
+(function () {{
+  var targets = {json.dumps(targets)};
+  try {{
+    if (localStorage.getItem("{LANGUAGE_CHOSEN_KEY}")) return;
+  }} catch (e) {{}}
+  var wanted = navigator.languages || [navigator.language || ""];
+  for (var i = 0; i < wanted.length; i++) {{
+    var target = targets[String(wanted[i]).split("-")[0].toLowerCase()];
+    if (target) {{
+      if (target !== "/") location.replace(target);
+      return;
+    }}
+  }}
+}})();
+</script>"""
+
+
 def _layout(lang: str, title: str, body: str, slug: str = "") -> str:
     t = LANGUAGES[lang]
     langs = _languages_of(slug) if slug else tuple(LANGUAGES)
@@ -253,12 +283,21 @@ def _layout(lang: str, title: str, body: str, slug: str = "") -> str:
         f'<a href="{_page_url(lang, page_slug)}">{page_title}</a>'
         for page_slug, page_title in zip(PAGES, t["titles"])
     )
+    # Every language version of this page, for search engines (English for any other language).
+    page_path = slug + "/" if slug else ""
+    alternates = "\n".join(
+        [f'<link rel="alternate" hreflang="{LANGUAGES[other]["html_lang"]}" '
+         f'href="https://{DOMAIN}{_prefix(other)}{page_path}">' for other in langs]
+        + [f'<link rel="alternate" hreflang="x-default" href="https://{DOMAIN}/{page_path}">']
+    )
+    redirect = _language_redirect() if lang == "en" and not slug else ""
     return f"""<!doctype html>
 <html lang="{t['html_lang']}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
+{alternates}{redirect}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -280,6 +319,14 @@ def _layout(lang: str, title: str, body: str, slug: str = "") -> str:
 <p>{t['contact']} <a href="mailto:{CONTACT}">{CONTACT}</a></p>
 <p>© Leviafan</p>
 </footer>
+<script>
+// A language picked in the menu is remembered: the home page never redirects again.
+document.querySelectorAll(".langs a").forEach(function (link) {{
+  link.addEventListener("click", function () {{
+    try {{ localStorage.setItem("{LANGUAGE_CHOSEN_KEY}", "1"); }} catch (e) {{}}
+  }});
+}});
+</script>
 </body>
 </html>
 """
